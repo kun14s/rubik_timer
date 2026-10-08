@@ -1,0 +1,7 @@
+cd ..
+pyinstaller --onefile --windowed --clean --exclude-module tkinter.test --exclude-module math --exclude-module test --exclude-module unittest --exclude-module pydoc --exclude-module doctest --exclude-module numpy --exclude-module pandas --exclude-module matplotlib --exclude-module scipy --exclude-module PIL --exclude-module PyQt5 --exclude-module PyQt6 --exclude-module PySide2 --exclude-module PySide6 --exclude-module wx --exclude-module kivy --exclude-module pygame --exclude-module sqlite3 --exclude-module xml --exclude-module http --exclude-module email --exclude-module urllib --exclude-module asyncio --exclude-module concurrent --exclude-module multiprocessing --exclude-module logging --exclude-module argparse --exclude-module csv --exclude-module ssl --exclude-module socket --exclude-module ftplib --exclude-module poplib --exclude-module imaplib --exclude-module smtplib --exclude-module telnetlib --exclude-module xmlrpc --exclude-module pydoc_data --exclude-module lib2to3 --exclude-module distutils --exclude-module setuptools --exclude-module pip --exclude-module pkg_resources rubik_timer_en.py
+del rubik_timer_en.spec
+rmdir /s /q build
+move dist\rubik_timer_en.exe bin
+rmdir /s /q dist
+upx -9 bin\rubik_timer_en.exe
